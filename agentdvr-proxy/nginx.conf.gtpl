@@ -52,26 +52,17 @@ http {
             set     $target "{{ .server }}";
 
             proxy_pass                  $target;
-            #proxy_http_version          1.1;
-            #proxy_ignore_client_abort   off;
-            #proxy_read_timeout          86400s;
-            #proxy_redirect              off;
-            #proxy_send_timeout          86400s;
-            #proxy_max_temp_file_size    0;
+            proxy_ignore_client_abort   off;
+            proxy_read_timeout          86400s;
+            proxy_send_timeout          86400s;
+            proxy_max_temp_file_size    0;
 
-            #proxy_set_header Accept-Encoding "";
-            #proxy_set_header Connection $connection_upgrade;
             #proxy_set_header Host $http_host;
-            #proxy_set_header Upgrade $http_upgrade;
-            #proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            #proxy_set_header X-Forwarded-Proto $scheme;
-            #proxy_set_header X-NginX-Proxy true;
-            #proxy_set_header X-Real-IP $remote_addr;
 
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-for $proxy_add_x_forwarded_for;
             proxy_set_header Host $host;
-            proxy_set_header X-Forwarded-Proto $remote_addr;
+            proxy_set_header X-Forwarded-Proto "http";
             proxy_set_header X-Forwarded-Protocol $scheme;
             proxy_redirect off;
             # Send websocket data to the backend aswell
