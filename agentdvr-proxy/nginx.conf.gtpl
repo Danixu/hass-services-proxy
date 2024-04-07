@@ -63,7 +63,7 @@ http {
             proxy_set_header X-Forwarded-for $proxy_add_x_forwarded_for;
             proxy_set_header Host $host;
             proxy_set_header X-Forwarded-Proto "http";
-            proxy_set_header X-Forwarded-Protocol $scheme;
+            proxy_set_header X-Forwarded-Protocol "http";
             proxy_redirect off;
             # Send websocket data to the backend aswell
             proxy_http_version 1.1;

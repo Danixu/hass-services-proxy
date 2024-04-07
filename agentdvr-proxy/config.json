@@ -1,6 +1,6 @@
 {
   "name": "AgentDVR Proxy",
-  "version": "0.1.3a",
+  "version": "0.1.3b",
   "slug": "agentdvr_proxy",
   "description": "Proxy for externally running AgentDVR",
   "url": "https://github.com/Danixu/hass-services-proxy/tree/master/agentdvr-proxy",
