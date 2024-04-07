@@ -59,11 +59,11 @@ http {
 
             #proxy_set_header Host $http_host;
 
-            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Real-IP "172.30.32.2";
             proxy_set_header X-Forwarded-for $proxy_add_x_forwarded_for;
             proxy_set_header Host $host;
-            proxy_set_header X-Forwarded-Proto "http";
-            proxy_set_header X-Forwarded-Protocol "http";
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Forwarded-Protocol $scheme;
             proxy_redirect off;
             # Send websocket data to the backend aswell
             proxy_http_version 1.1;
