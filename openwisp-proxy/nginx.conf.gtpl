@@ -62,8 +62,10 @@ http {
             proxy_set_header Connection $connection_upgrade;
             {{- if .domain}}
             proxy_set_header Host "{{.domain}}";
+            proxy_set_header Referer "https://{{.domain}}";
             {{- else}}
             proxy_set_header Host $http_host;
+            proxy_set_header Referer $http_referer;
             {{- end}}
             {{- if not .verify_ssl}}
             proxy_ssl_verify              off;
