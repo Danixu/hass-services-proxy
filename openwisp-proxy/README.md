@@ -1,4 +1,4 @@
-# Home Assistant Add-on: AgentDVR Proxy
+# Home Assistant Add-on: OpenWisp Proxy
 
 ⚠️ This addon does not contain the OpenWisp service ⚠️
 
