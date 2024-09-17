@@ -75,7 +75,7 @@ http {
             proxy_set_header X-NginX-Proxy true;
             proxy_set_header X-Real-IP $remote_addr;
 
-            // Filters
+            # Filters
             proxy_redirect '/' $http_x_ingress_path/;
             sub_filter 'href="/' 'href="$http_x_ingress_path/';
             sub_filter '<script src="/' '<script src="$http_x_ingress_path/';
