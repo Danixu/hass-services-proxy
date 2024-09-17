@@ -1,6 +1,6 @@
 {
   "name": "OpenWisp Proxy",
-  "version": "0.1.0k",
+  "version": "0.1.0l",
   "slug": "openwisp_proxy",
   "description": "Proxy for externally running OpenWisp",
   "url": "https://github.com/Danixu/hass-services-proxy/tree/master/openwisp-proxy",

@@ -76,10 +76,10 @@ http {
 
             # Filters
             proxy_redirect '/' $http_x_ingress_path/;
+            sub_filter '<form action="/admin/'  '<form action="admin/';
             sub_filter 'href="/' 'href="$http_x_ingress_path/';
             sub_filter '<script src="/' '<script src="$http_x_ingress_path/';
             sub_filter "top.location.href='" "top.location.href='$http_x_ingress_path";
-            sub_filter 'href="/admin/'  'href="admin/';
 
             sub_filter_once off;
         }
