@@ -49,6 +49,8 @@ http {
             allow   172.30.32.2;
             deny    all;
 
+            absolute_redirect off;
+
             proxy_pass                  {{ .server }};
             proxy_http_version          1.1;
             proxy_ignore_client_abort   off;
