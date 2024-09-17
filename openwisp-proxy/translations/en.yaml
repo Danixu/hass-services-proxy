@@ -1,0 +1,13 @@
+---
+configuration:
+  server:
+    name: Server
+    description: Server to which connect including the protocol.
+  domain:
+    name: Domain
+    description: The configured domain in the OpenWisp server. For example openwisp.local.
+  verify_ssl:
+    name: Verify SSL
+    description: >-
+      Verify the SSL certificate of the server. Set to false if the server is
+      using a self-signed certificate.

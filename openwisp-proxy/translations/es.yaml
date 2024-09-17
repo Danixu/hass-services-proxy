@@ -1,0 +1,13 @@
+---
+configuration:
+  server:
+    name: Servidor
+    description: Servidor al que conectar incluyendo el protocolo.
+  domain:
+    name: Dominio
+    description: El dominio configurado en el servidor, por ejemplo openwisp.local.
+  verify_ssl:
+    name: Verificar SSL
+    description: >-
+      Verifica el certificado SSL del servidor. Desactivar si el servidor está usando un
+      certificado autofirmado.
