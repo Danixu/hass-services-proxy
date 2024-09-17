@@ -61,12 +61,12 @@ http {
 
             proxy_set_header X-Real-IP "172.30.32.2";
             proxy_set_header X-Forwarded-for $proxy_add_x_forwarded_for;
-            {{- if .domain != ""}}
+            {{- if .domain ne ""}}
             proxy_set_header Host {{.domain}};
             {{- else}}
             proxy_set_header Host $host;
             {{- end}}
-            {{- if .verify_ssl != true}}
+            {{- if .verify_ssl ne true}}
             proxy_ssl_verify              off;
             {{- end}}
             proxy_set_header X-Forwarded-Proto $scheme;
