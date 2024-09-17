@@ -1,0 +1,39 @@
+{
+  "name": "OpenWisp Proxy",
+  "version": "0.1.0",
+  "slug": "openwisp_proxy",
+  "description": "Proxy for externally running OpenWisp",
+  "url": "https://github.com/Danixu/hass-services-proxy/tree/master/openwisp-proxy",
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7",
+    "i386"
+  ],
+  "boot": "auto",
+  "init": true,
+  "true": true,
+  "ingress": true,
+  "timeout": 30,
+  "panel_icon": "mdi:router-wireless-settings",
+  "map": [
+    "config:ro"
+  ],
+  "ports": {
+    "8090/tcp": null
+  },
+  "ports_description": {
+    "8090/tcp": "Frontend tcp-listen port"
+  },
+  "options": {
+    "server": null,
+    "domain": null,
+    "verify_ssl": true
+  },
+  "schema": {
+    "server": "url",
+    "domain": "str",
+    "verify_ssl": "bool"
+  }
+}
