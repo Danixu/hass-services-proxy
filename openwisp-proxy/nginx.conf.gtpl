@@ -49,20 +49,16 @@ http {
             allow   172.30.32.2;
             deny    all;
 
-            set     $target "{{ .server }}";
-
-            proxy_pass                  $target;
+            proxy_pass                  {{ .server }};
             proxy_ignore_client_abort   off;
             proxy_read_timeout          86400s;
             proxy_send_timeout          86400s;
             proxy_max_temp_file_size    0;
 
-            #proxy_set_header Host $http_host;
-
             proxy_set_header X-Real-IP "172.30.32.2";
             proxy_set_header X-Forwarded-for $proxy_add_x_forwarded_for;
             {{- if .domain}}
-            proxy_set_header Host {{.domain}};
+            proxy_set_header Host "{{.domain}}";
             {{- else}}
             proxy_set_header Host $host;
             {{- end}}

@@ -1,6 +1,6 @@
 {
   "name": "OpenWisp Proxy",
-  "version": "0.1.0c",
+  "version": "0.1.0d",
   "slug": "openwisp_proxy",
   "description": "Proxy for externally running OpenWisp",
   "url": "https://github.com/Danixu/hass-services-proxy/tree/master/openwisp-proxy",
@@ -17,6 +17,7 @@
   "ingress": true,
   "timeout": 30,
   "panel_icon": "mdi:router-wireless-settings",
+  "panel_title": "OpenWisp Proxy",
   "map": [
     "config:ro"
   ],
@@ -28,7 +29,6 @@
   },
   "options": {
     "server": null,
-    "domain": null,
     "verify_ssl": true
   },
   "schema": {
