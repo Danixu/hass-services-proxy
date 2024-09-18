@@ -81,7 +81,7 @@ http {
             sub_filter '<form action="/'  '<form action="$http_x_ingress_path/';
             sub_filter 'href="/' 'href="$http_x_ingress_path/';
             sub_filter '<script src="/' '<script src="$http_x_ingress_path/';
-            sub_filter '<img src="/' '<script src="$http_x_ingress_path/';
+            sub_filter '<img src="/' '<img src="$http_x_ingress_path/';
             sub_filter "top.location.href='" "top.location.href='$http_x_ingress_path";
 
             sub_filter_once off;
