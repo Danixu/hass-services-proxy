@@ -89,7 +89,7 @@ http {
             sub_filter 'src="/api' 'src="$http_x_ingress_path/api';
             sub_filter "Audio('/static" "Audio('$http_x_ingress_path/static";
             sub_filter "/ws/" "$http_x_ingress_path/ws/";
-            sub_filter "/api/v1/monitoring/geojson/" sub_filter "$http_x_ingress_path/api/v1/monitoring/geojson/";
+            sub_filter "/api/v1/monitoring/geojson/" "$http_x_ingress_path/api/v1/monitoring/geojson/";
 
             sub_filter_once off;
         }
