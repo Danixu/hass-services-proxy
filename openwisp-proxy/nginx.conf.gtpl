@@ -77,6 +77,8 @@ http {
             proxy_set_header X-Real-IP $remote_addr;
 
             proxy_hide_header "content-security-policy";
+            proxy_hide_header "x-frame-options";
+            proxy_hide_header "x-xss-protection";
 
             # Filters
             proxy_redirect '/' $http_x_ingress_path/;
