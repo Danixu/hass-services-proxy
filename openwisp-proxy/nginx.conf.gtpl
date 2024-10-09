@@ -83,7 +83,7 @@ http {
             sub_filter '<script src="/' '<script src="$http_x_ingress_path/';
             sub_filter '<img src="/' '<img src="$http_x_ingress_path/';
             sub_filter "top.location.href='" "top.location.href='$http_x_ingress_path";
-            sub_filter 'src="/static' "top.location.href='$http_x_ingress_path/static";
+            sub_filter 'src="/static' 'src="$http_x_ingress_path/static';
 
             sub_filter_once off;
         }
