@@ -76,6 +76,8 @@ http {
             proxy_set_header X-NginX-Proxy true;
             proxy_set_header X-Real-IP $remote_addr;
 
+            proxy_hide_header "content-security-policy";
+
             # Filters
             proxy_redirect '/' $http_x_ingress_path/;
             sub_filter '<form action="/'  '<form action="$http_x_ingress_path/';
@@ -86,6 +88,8 @@ http {
             sub_filter 'src="/static' 'src="$http_x_ingress_path/static';
             sub_filter 'src="/api' 'src="$http_x_ingress_path/api';
             sub_filter "Audio('/static" "Audio('$http_x_ingress_path/static";
+            sub_filter "/ws/" "$http_x_ingress_path/ws/";
+            sub_filter "/api/v1/monitoring/geojson/" sub_filter "$http_x_ingress_path/api/v1/monitoring/geojson/";
 
             sub_filter_once off;
         }
