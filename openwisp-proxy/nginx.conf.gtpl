@@ -84,6 +84,8 @@ http {
             sub_filter '<img src="/' '<img src="$http_x_ingress_path/';
             sub_filter "top.location.href='" "top.location.href='$http_x_ingress_path";
             sub_filter 'src="/static' 'src="$http_x_ingress_path/static';
+            sub_filter 'src="/api' 'src="$http_x_ingress_path/api';
+            sub_filter "Audio('/static" "Audio('$http_x_ingress_path/static";
 
             sub_filter_once off;
         }
